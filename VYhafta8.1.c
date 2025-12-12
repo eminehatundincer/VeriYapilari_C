@@ -3,7 +3,7 @@
 #include<string.h>
 #define MAX_SIZE 100
  //REVERSE FONKSİYONU
-void reverse_string(char* str) {
+/*void reverse_string(char* str) {
 	int len = strlen(str);
 	for (int i = 0; i < len;i++) {
 		push(str[i]);
@@ -23,7 +23,8 @@ int main() {
 	free_stack();
 	printf("Bellek serbest býrakýldý.\n");
 	return 0;
-}*/ /*
+}*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -95,4 +96,5 @@ int main() {
 
     return 0;
 }
+
 
