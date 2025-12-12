@@ -1,10 +1,8 @@
-
-/*
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
 #define MAX_SIZE 100
-
+ //REVERSE FONKSÄ°YONU
 void reverse_string(char* str) {
 	int len = strlen(str);
 	for (int i = 0; i < len;i++) {
@@ -18,12 +16,12 @@ int main() {
 	char text[MAX SIZE];
 	printf("Bir metin girin: ");
 	fgets(text, MAX_SIZE, stdin);
-	text[strcspn(text, "\n")] = 0; // Yeni satýr karakterini kaldýr
+	text[strcspn(text, "\n")] = 0; // Yeni satÃ½r karakterini kaldÃ½r
 	reverse_string(text);
 		
-	printf("Ters çevrilmiþ metin: %s\n", text);
+	printf("Ters Ã§evrilmiÃ¾ metin: %s\n", text);
 	free_stack();
-	printf("Bellek serbest býrakýldý.\n");
+	printf("Bellek serbest bÃ½rakÃ½ldÃ½.\n");
 	return 0;
 }*/ /*
 #include <stdio.h>
@@ -31,16 +29,16 @@ int main() {
 #include <string.h>
 #define MAX_SIZE 100
 
-// --- Stack Yapýsý ---
+// --- Stack YapÃ½sÃ½ ---
 struct Stack {
     char data[MAX_SIZE];
     int top;
 };
 
-// Stack deðiþkeni global tanýmlandý
+// Stack deÃ°iÃ¾keni global tanÃ½mlandÃ½
 struct Stack stack = { .top = -1 };
 
-// Stack iþlemleri
+// Stack iÃ¾lemleri
 void push(char c) {
     if (stack.top == MAX_SIZE - 1) {
         printf("Stack dolu!\n");
@@ -58,19 +56,19 @@ char pop() {
 }
 
 void free_stack() {
-    stack.top = -1; // Belleði sýfýrlamaya gerek yok, sadece boþaltmak yeterli
+    stack.top = -1; // BelleÃ°i sÃ½fÃ½rlamaya gerek yok, sadece boÃ¾altmak yeterli
 }
 
-// --- Stringi Ters Çeviren Fonksiyon ---
+// --- Stringi Ters Ã‡eviren Fonksiyon ---
 void reverse_string(char* str) {
     int len = strlen(str);
 
-    // Tüm karakterleri stack'e at
+    // TÃ¼m karakterleri stack'e at
     for (int i = 0; i < len; i++) {
         push(str[i]);
     }
 
-    // Stack'ten çýkararak ters sýrayla geri yaz
+    // Stack'ten Ã§Ã½kararak ters sÃ½rayla geri yaz
     for (int i = 0; i < len; i++) {
         str[i] = pop();
     }
@@ -83,17 +81,18 @@ int main() {
     printf("Bir metin girin: ");
     fgets(text, MAX_SIZE, stdin);
 
-    // Yeni satýr karakterini kaldýr
+    // Yeni satÃ½r karakterini kaldÃ½r
     text[strcspn(text, "\n")] = '\0';
 
-    // Ters çevir
+    // Ters Ã§evir
     reverse_string(text);
 
-    printf("Ters çevrilmiþ metin: %s\n", text);
+    printf("Ters Ã§evrilmiÃ¾ metin: %s\n", text);
 
-    // Stack'i sýfýrla
+    // Stack'i sÃ½fÃ½rla
     free_stack();
-    printf("Bellek serbest býrakýldý.\n");
+    printf("Bellek serbest bÃ½rakÃ½ldÃ½.\n");
 
     return 0;
-}*/
+}
+
