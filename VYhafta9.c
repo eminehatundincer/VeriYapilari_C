@@ -1,4 +1,3 @@
-/*
 #include<stdio.h>
 #include<stdlib.h>
 
@@ -71,13 +70,13 @@ int main() {
 	enqueue(yeni, 5); enqueue(yeni, 15); enqueue(yeni, 25);
 	enqueue(yeni, 35);
 	printf("Kuyruk boyutu=%d\n", sizeC(yeni));
-	printf("Max deðerli eleman = %d\n", findMax(yeni,0));
+	printf("Max deÃ°erli eleman = %d\n", findMax(yeni,0));
 	int i = 0;
 	while (i < 4) {
 		printf("Alinan = %d\n", yeni->array[i]);
 		i++;
 	}
-	buradan çok fazla soru çýkabilir
+	buradan Ã§ok fazla soru Ã§Ã½kabilir
 	yeni->front = 0;
 	reverse(yeni);
 	i = 1;
@@ -88,4 +87,3 @@ int main() {
 	}
 	return 0;
 } 
-*/
