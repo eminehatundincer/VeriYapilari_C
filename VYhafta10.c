@@ -18,6 +18,6 @@ int main() {
 	tree->left = newNode(8);
 	tree->right = newNode(10);
 	tree->right->right = newNode(19);
-	printf("Sağın sağı = %d\n", tree->right->right->data);
+	printf("SaÃ°Ã½n saÃ°Ã½ = %d\n", tree->right->right->data);
 	return 0;
 }
