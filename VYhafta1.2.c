@@ -1,4 +1,4 @@
-/*#define _CRT_SECURE_NO_WARNINGS
+#define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
@@ -15,14 +15,14 @@ struct node* newNode(int x) {
 	return yeni;
 }
 
-//BAÐLI LÝSTEDE BÝRÝNCÝ ELEMANI SÝLEN FONKSÝYON
+//BAÄžLI LÄ°STEDE BÄ°RÄ°NCÄ° ELEMANI SÄ°LEN FONKSÄ°YON
 void basSil(struct node** head) {
 	struct node* tmp = *head;
 	*head = tmp->next;
 	free(tmp);
 }
 
-//BAÐLI LÝSTEDE ÝTEM ÝLE VERÝLEN ELEMANI SÝLEN FONKSÝYON
+//BAÄžLI LÄ°STEDE Ä°TEM Ä°LE VERÄ°LEN ELEMANI SÄ°LEN FONKSÄ°YON
 void ortSil(struct node* head, int item) {
 	struct node* tmp = head;
 	struct node* tmp2 = tmp -> next;
@@ -33,7 +33,7 @@ void ortSil(struct node* head, int item) {
 	free(tmp2);
 }
 
-//BAÐLI LÝSTEDE SONDAKÝ ELEMANI SÝLEN FONKSÝYON
+//BAÄžLI LÄ°STEDE SONDAKÄ° ELEMANI SÄ°LEN FONKSÄ°YON
 void sonSil(struct node* head) {
 	struct node* tmp = head;
 	while (tmp->next->next != NULL) {
@@ -44,7 +44,7 @@ void sonSil(struct node* head) {
 }
 
 
-//BAÐLI LÝSTEYÝ TERSTEN YAZDIRMAK ÝÇÝN GEREKLÝ FONKSÝYON
+//BAÄžLI LÄ°STEYÄ° TERSTEN YAZDIRMAK Ä°Ã‡Ä°N GEREKLÄ° FONKSÄ°YON
 void tersCevir(struct node** head) {
 	struct node* tmp, * tmp2, * tmp3;
 	tmp = *head;
@@ -58,7 +58,7 @@ void tersCevir(struct node** head) {
 	*head = tmp2;
 }
 
-//BAÐLI LÝSTEYÝ YAZDIRAN FONKSÝYON
+//BAÄžLI LÄ°STEYÄ° YAZDIRAN FONKSÄ°YON
 void printList(struct node* head) {
 	struct node* tmp = head;
 	while (tmp != NULL) {
@@ -78,12 +78,12 @@ int main() {
 	printf("Orijinal Liste:\n");
 	printList(yeni1);
 
-	basSil(&yeni1); //HEAD DEÐÝÞTÝÐÝ ÝÇÝN & ÝÞARETÝ GEREKLÝDÝR.
-	printf("Baþý sildikten sonra: ");
+	basSil(&yeni1); //HEAD DEÄžÄ°ÅžTÄ°ÄžÄ° Ä°Ã‡Ä°N & Ä°ÅžARETÄ° GEREKLÄ°DÄ°R.
+	printf("BaÅŸÄ± sildikten sonra: ");
 	printList(yeni1); // 10 15 20
 
-	// 'ortSil(yeni1, 10)' çaðrýsý HATA verir, çünkü bu fonksiyon baþý silemez.
-	// Mantýklý olan çaðrý '15'i silmektir.
+	// 'ortSil(yeni1, 10)' Ã§aÄŸrÄ±sÄ± HATA verir, Ã§Ã¼nkÃ¼ bu fonksiyon baÅŸÄ± silemez.
+	// MantÄ±klÄ± olan Ã§aÄŸrÄ± '15'i silmektir.
 	ortSil(yeni1, 15);
 	printf("Ortadan '15'i sildikten sonra: ");
 	printList(yeni1); // 10 20
@@ -98,4 +98,5 @@ int main() {
 
 	return 0;
 
-}*/
+}
+
