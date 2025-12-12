@@ -1,5 +1,6 @@
-/*#include<stdio.h>
+#include<stdio.h>
 void decimalToBinary(int n) {
+ //	ONLUK TABAN
 	if (n == 0) {
 		return;
 	}
@@ -22,4 +23,5 @@ int main() {
 
 	}
 	return 0;
-}*/
+
+}
