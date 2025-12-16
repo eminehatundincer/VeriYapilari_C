@@ -1,6 +1,7 @@
 #include<stdlib.h>
 #include<stdio.h>
 
+//bubbleSort ile verilen diziyi büyükten küçüğe yazdır.
 void bubbleSort(int* arr, int n) {
 	int i, j, tmp;
 	for (i = 0; i < n - 1; i++) {
