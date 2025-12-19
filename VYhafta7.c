@@ -1,4 +1,4 @@
-/*#include<stdio.h>
+#include<stdio.h>
 void move(int n, char source, char dest, char sparse) {
 	if (n == 1) {
 		printf("\n MOve from %c to %c", source, dest);
@@ -16,4 +16,5 @@ int main() {
 	move(n, 'A', 'C', 'B');
 	return 0;
 }
-//123 lü örneði bu formatta dene */
+
+//123 lÃ¼ Ã¶rneÃ°i bu formatta dene */
